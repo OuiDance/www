@@ -14,11 +14,14 @@ class My_Controller extends CI_Controller
             'view' => $this->default_view,
             'include_nav' => true,
             'include_footer' => true,
-            'php_to_js'     => array(
-                "base_url" => base_url(),
-                "api_url" => $this->config->item('api_url')
+            'php_to_js' => array(
+                "base_url"  => base_url(),
+                "api_url"   => $this->config->item('api_url')
                 ),
-            'scripts' => array()
+            'scripts' => array(
+                'third_party/tether/js/tether.min.js',
+                'third_party/bootstrap/js/bootstrap.min.js'
+                )
             );
     }
 
